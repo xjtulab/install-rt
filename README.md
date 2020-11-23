@@ -1,3 +1,14 @@
+## 一些安装rtlinux的脚本
+
++ basic_install.sh 用来第一次进入系统安装一些必要的软件，如gcc，make等。
++ start.sh 用来下载linux内核及补丁到指定目录，以供后面的编译操作。
+
+
+
+
+
+## 参考链接
+
 1. [CentOS 7 下编译安装 Linux 4.14 内核](https://blog.csdn.net/mrzhouxiaofei/article/details/79140435)
 2. [Linux 内核实时补丁PREEMPT_RT 安装](https://blog.csdn.net/zzsfqiuyigui/article/details/7621665)
 3. [给linux内核打实时补丁preempt_rt](https://www.jianshu.com/p/8787e45a9e01)
