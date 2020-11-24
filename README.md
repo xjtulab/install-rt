@@ -2,7 +2,7 @@
 
 + basic_install.sh 用来第一次进入系统安装一些必要的软件，如gcc，make等。
 + start.sh 用来下载linux内核及补丁到指定目录，以供后面的编译操作。
-
++ install_cyclictest.sh 用来安装cyclictest测试程序
 
 
 
