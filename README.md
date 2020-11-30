@@ -3,6 +3,7 @@
 + basic_install.sh 用来第一次进入系统安装一些必要的软件，如gcc，make等。
 + start.sh 用来下载linux内核及补丁到指定目录，以供后面的编译操作。
 + install_cyclictest.sh 用来安装cyclictest测试程序
++ cyc.sh 用来多次测试cyclictest然后统计结果，用法 ./cyc n ，结果会保存在result.txt
 
 
 
