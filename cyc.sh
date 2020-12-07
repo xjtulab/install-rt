@@ -1,18 +1,20 @@
 #!/bin/bash
 
 
-#Run ./cyc n fname
+#Run ./cyc n fname logname
 #n是测试的次数 fname是结果保存的文件
-# ./cyc 10 result.txt
+# ./cyc 10 result.txt log.txt
 
 echo "This is cyclictest"
 n=$1
 #当$2为null或则空的字符串时 result为result.txt
 result=${2:-"result.txt"}
-log_file="latency.log"
+#log_file="latency.log"
+
+log_file=${3:-"log.txt"}
 
 #cyclictest执行的命令
-cyc_ins="sudo cyclictest -t1 -p80 -n -i 10000 -l 10000"
+cyc_ins="sudo cyclictest -t1 -p80 -n -i 10000 -l 100"
 
 #结果的前置信息 -e 的意思是允许转义，默认是不允许的
 info="${cyc_ins}\nResults:\n\n"
