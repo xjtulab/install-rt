@@ -14,7 +14,7 @@ result=${2:-"result.txt"}
 log_file=${3:-"log.txt"}
 
 #cyclictest执行的命令
-cyc_ins="sudo cyclictest -t1 -p80 -n -i 10000 -l 100"
+cyc_ins="sudo cyclictest -t1 -p80 -n -i 10000 -l 10000"
 
 #结果的前置信息 -e 的意思是允许转义，默认是不允许的
 info="${cyc_ins}\nResults:\n\n"
@@ -55,6 +55,7 @@ function check(){
 
 
 
+begin_time=$(date +%s)
 
 #n次循环
 for i in $(seq 1 $n)
@@ -70,6 +71,13 @@ done
 
 average_latency=`expr $total_latency / $n`
 
+end_time=$(date +%s)
+
+total_seconds=$(($end_time - $begin_time))
+minutes=$(($total_seconds / 60))
+seconds=$(($total_seconds % 60))
+
+echo "total cost time is ${minutes} mins ${seconds} secs."
 echo "------------------------------------------"
 echo "------------------------------------------"
 echo "Total test count is $n" | tee -a $result
