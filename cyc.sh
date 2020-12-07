@@ -55,6 +55,7 @@ function check(){
 
 
 
+begin_time=$(date +%s)
 
 #n次循环
 for i in $(seq 1 $n)
@@ -70,6 +71,13 @@ done
 
 average_latency=`expr $total_latency / $n`
 
+end_time=$(date +%s)
+
+total_seconds=$(($end_time - $begin_time))
+minutes=$(($total_seconds / 60))
+seconds=$(($total_seconds % 60))
+
+echo "total cost time is ${minutes} mins ${seconds} secs."
 echo "------------------------------------------"
 echo "------------------------------------------"
 echo "Total test count is $n" | tee -a $result
