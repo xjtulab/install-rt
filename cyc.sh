@@ -14,7 +14,7 @@ result=${2:-"result.txt"}
 log_file=${3:-"log.txt"}
 
 #cyclictest执行的命令
-cyc_ins="sudo cyclictest -t1 -p80 -n -i 10000 -l 100"
+cyc_ins="sudo cyclictest -t1 -p80 -n -i 10000 -l 10000"
 
 #结果的前置信息 -e 的意思是允许转义，默认是不允许的
 info="${cyc_ins}\nResults:\n\n"
